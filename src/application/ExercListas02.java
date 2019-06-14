@@ -15,7 +15,7 @@ public class ExercListas02 {
 		System.out.print("How many employees will be registered?");
 		int n = sc.nextInt();
 		List<Funcionario> list = new ArrayList<>();
-		for (int i=1;i<=n;i++) {
+		for (int i = 1; i <= n; i++) {
 			System.out.println();
 			System.out.print("Emplyoee #" + i + " : ");
 			System.out.print("ID : ");
@@ -28,27 +28,26 @@ public class ExercListas02 {
 			Funcionario f = new Funcionario(id, nome, salario);
 			list.add(f);
 		}
-		
+
 		System.out.print("Enter the employee id that will have salary increase : ");
 		int id = sc.nextInt();
-		
-		Funcionario f = list.stream().filter(x -> x.getID()==id).findFirst().orElse(null) ;
+
+		Funcionario f = list.stream().filter(x -> x.getID() == id).findFirst().orElse(null);
 		if (f == null) {
 			System.out.println("Funcionário não existe!");
-		}
-		else {
-			
+		} else {
+
 			System.out.print("Enter the percentage : ");
 			double percent = sc.nextDouble();
 			f.IncrementaSalario(percent);
 		}
 
 		System.out.println("List of employees:");
-		
+
 		for (Funcionario x : list) {
-			System.out.println( x.toString());
+			System.out.println(x.toString());
 		}
-		
+		sc.close();
 
 	}
 

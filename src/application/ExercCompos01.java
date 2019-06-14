@@ -2,7 +2,6 @@ package application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
@@ -16,9 +15,7 @@ public class ExercCompos01 {
 
 	public static void main(String[] args) throws ParseException {
 		Locale.setDefault(Locale.US);
-		Calendar cal = Calendar.getInstance();
 		SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
-		SimpleDateFormat sdf2 = new SimpleDateFormat("MM/yyyy");
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter department's name: ");
 		String dep = sc.nextLine();
